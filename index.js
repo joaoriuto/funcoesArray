@@ -23,4 +23,28 @@ const celsius = fahrenheit.map( function( elem ) {
 })
  //farenheit.map(elem => Math.round( elem - 32 ) * 5/9 ) 
 
-console.log( celsius )
+// console.log( celsius )
+
+/* Números pares
+================================================================ */
+
+const pares = numbers.map(par => par % 2 == 0)
+// console.log(pares)
+
+
+
+
+/*============================================================
+ * filter() -> Remove elementos do array com base em 
+            determinadas condições.
+ * ===========================================================
+ */
+
+ /* Remover números duplicados
+================================================================ */
+
+const yetAnotherArray = [ 1, 2, 3, 6, 7, 18, 33, 2, 3, 4, 55, 6, 7, 8, 2, 44, 5 ]
+
+const uniqueArray = yetAnotherArray.filter( (elemento, index, arrayOriginal) => arrayOriginal.indexOf( elemento ) === index )
+
+console.log(uniqueArray)
