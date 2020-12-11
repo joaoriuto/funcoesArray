@@ -47,4 +47,26 @@ const yetAnotherArray = [ 1, 2, 3, 6, 7, 18, 33, 2, 3, 4, 55, 6, 7, 8, 2, 44, 5 
 
 const uniqueArray = yetAnotherArray.filter( (elemento, index, arrayOriginal) => arrayOriginal.indexOf( elemento ) === index )
 
-console.log(uniqueArray)
+// console.log(uniqueArray)
+
+
+/*============================================================
+ * reduce() -> Encontrar valor comulativo concatenado com base
+            nos elementos do array.
+ * ===========================================================
+ */
+
+ /* Lançamento de foguetes (Total de lançamentos)
+================================================================ */
+
+const rockets = [
+    { country: "Russia", launches: 32 },
+    { country: "US", launches: 101 },
+    { country: "China", launches: 16 },
+    { country: "Europe", launches: 7 },
+    { country: "India", launches: 4 },
+    { country: "Japan", launches: 66 }
+]
+
+const totalLaunches = rockets.reduce( (valorAnterior, valorAtual) => valorAnterior + valorAtual.launches, 0 )
+console.log(totalLaunches)
