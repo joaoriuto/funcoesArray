@@ -69,4 +69,72 @@ const rockets = [
 ]
 
 const totalLaunches = rockets.reduce( (valorAnterior, valorAtual) => valorAnterior + valorAtual.launches, 0 )
-console.log(totalLaunches)
+// console.log(totalLaunches)
+
+/*============================================================
+ * every() -> É utilizando quando se quer testar todos 
+ os elementos de um array.
+    ** O método filter retorna outro array e o every, boolean.
+ * ===========================================================
+ */
+
+ /* Verificar se os elementos de um array são maiores que 10
+================================================================ */
+
+const arrayAleatorio = [  11, 54, 32, 56 ,77 ,234, 234, 123, 42 ]
+
+const allAbove10 = arrayAleatorio.every( elemento => elemento > 10 )
+// console.log(allAbove10)
+
+ /* Verificar se a pessoa tem 18 anos ou mais
+================================================================ */
+
+const tchurma = [
+    { id: 12, name: "Frederico", age: 24 },
+    { id: 48, name: "Francisca", age: 18 },
+    { id: 77, name: "Presunto", age: 48 },
+    { id: 89, name: "AgaMenon", age: 48 }
+]
+
+// console.log( tchurma.every( p => p.age >= 18 ))
+
+const itensNaMesa = [
+    { id: 1, item: "Controle", quant: 1 },
+    { id: 2, item: "Caderno", quant: 2 }
+]
+
+const exists = itensNaMesa.every(p => p.id > 0 )
+// console.log(exists)
+
+/*============================================================
+ * some() -> Utilizado para saber se no mínimo um item 
+        do array passa no teste. (boolean)
+ * ===========================================================
+ */
+
+ /* Verificar se há ao menos um número primo.
+================================================================ */
+
+function isPrime( value ) {
+    for ( let i = 2; i < value; i++ ){
+        if ( value % i === 0 ) {
+            return false
+        }
+    }
+
+    return value > 1
+}
+
+// console.log( arrayAleatorio.some( isPrime ))
+
+/* Verificar se há ao menos um piloto.
+================================================================ */
+
+const team = [
+    { id: 12, name: "Tropper Harley", pilot: true },
+    { id: 22, name: "Ramadda Thompson", pilot: true },
+    { id: 32, name: "Alexa Balalaika", pilot: false },
+    { id: 42, name: "Galax Hitchiker", pilor: true }
+]
+
+console.log( team.some( person => person.pilot ))
