@@ -137,4 +137,41 @@ const team = [
     { id: 42, name: "Galax Hitchiker", pilor: true }
 ]
 
-console.log( team.some( person => person.pilot ))
+// console.log( team.some( person => person.pilot ))
+
+
+/*============================================================
+ * find() -> Procurar ou verificar por valor no array e 
+ retorna o primeiro  resultado
+ * ===========================================================
+ */
+
+ /* Procurar Pizzas
+================================================================ */
+
+const pizzas = [
+    "mussarela",
+    "calabresa",
+    "portuguesa",
+    "marguerita"
+]
+
+const foundPizza = pizzas.find( pizza => pizza.startsWith( "m" ))
+
+//console.log( foundPizza ) 
+//Retorna a primeira pizza e encerra a busca.
+
+/* Procurar Frutas
+================================================================ */
+
+const fruits = [
+    { name: "jaca", quantity: 2 },
+    { name: "banana", quantity: 3 },
+    { name: "cereja", quantity: 5 },
+    { name: "apple", quantity: 42 }
+]
+
+const procura = "apple"
+const foundFruit = fruits.find( fruit => fruit.name === procura )
+
+console.log( foundFruit )
